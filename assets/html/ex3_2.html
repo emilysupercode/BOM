@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM ex 3_2</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <main>
+        <div id="minuteCountdownBereich">
+            <p> Minuten Countdown:</p>
+            <div id="time">00:00</div>
+            <input id="minutes" type="Number" min="0" placeholder=" Minuten übrig..." />
+            <br />
+            <button onclick="startMinCountdown()">Start Countdown</button>
+            <br />
+            <button onclick="pauseMinCountdown()">Pause Countdown</button>
+            <br />
+            <button onclick="continueMinCountdown()">Continue Countdown</button>
+            <br />
+            <button onclick="resetMinCountdown()">Reset Countdown</button>
+        </div>
+    </main>
+    <a href="../../index.html">Take me home</a>
+    <script src="../js/ex3_2.js"></script>
+</body>
+
+</html>
