@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.exercise1_2 {
+    background-color: #ffad87;
+    width: 150px;
+}
+
+.style {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.zeit {
+    background-color: #fa877f;
+    width: 100px;
+    color: #dedef0;
+    border-radius: 5px;
+    padding: 10px 5px;
+    text-align: center;
+}
+
+.exercise1_2 button {
+    background-color: #fa877f;
+    color: #dedef0;
+    margin-top: 10px;
+    padding: 5px;
+    width: 50px;
+    border-radius: 5px;
+}
+
+#liveClock1 {
+    background-color: #022C43;
+    color: #FFD700;
+    border: solid #115173;
+    border-width: 10px 20px;
+    border-radius: 40px;
+    width: 700px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 20px;
+}
+
+#liveClock2 {
+    background-color: #115173;
+    color: #FFD700;
+    border: solid #022C43;
+    border-width: 10px 20px;
+    border-radius: 40px;
+    width: 700px;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 20px;
+}
+
+#liveClock1 div,
+#liveClock2 div {
+    display: flex;
+    flex-direction: column;
+}
+
+#liveClock1 .large,
+#liveClock2 .large {
+    font-size: 4rem;
+}
+
+#liveClock1 div .small,
+#liveClock2 div .small {
+    font-size: 1rem;
+}
+
+#exercise2_1 {
+    height: 80vh
+}
+
+#exercise2_1 article {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #c33764, #1d2671);
+    height: 100%;
+    overflow: hidden;
+}
+
+#exercise2_1 .message {
+    font-family: Geneva;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    border: 15px solid #000;
+    border-radius: 50%;
+    box-shadow: 5px 5px 15px #000 inset;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+#exercise2_1 p {
+    color: #fff;
+    font-size: 22px;
+    width: 85%;
+    margin: 110px auto 40px;
+}
+
+#exercise2_1 #count {
+    color: #fff;
+    font-size: 70px;
+}
+
+#minuteCountdownBereich {
+    background-color: #dcffcc;
+    color: #baabda;
+    display: inline-block;
+    padding: 10px;
+    font-family: Geneva;
+    font-weight: bold;
+}
+
+#minuteCountdownBereich input {
+    border-radius: 5px;
+    background: #9fdfcd;
+}
+
+#minuteCountdownBereich button {
+    border-radius: 5px;
+    background: #d79abc;
+}

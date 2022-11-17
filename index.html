@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <h1>BOM</h1>
+    <h2>2_1</h2>
+    <p>(shows on load until countdown is complete)</p>
+    <section id="exercise2_1">
+        <article>
+            <div class="message">
+                <p>Diese Meldung wird automatisch verschwinden in </p>
+                <div id="count">10</div>
+            </div>
+        </article>
+    </section>
+
+    <h2>1_1</h2>
+    <div>
+        <p id="waitThreeSeconds"></p>
+        <button type="button" id="timeWasting" onclick="timerPart1()">Waste 3 Seconds</button>
+    </div>
+    <br>
+    <br>
+    <div>
+        <button type="button" id="startTimer2" onclick="writeTimer()">Show Clock</button>
+        <p id="clock"></p>
+        <button type="button" id="stopTimer2" onclick="clearTimerPart2()">Stop Clock</button>
+    </div>
+    <br>
+    <div>
+        <p id="countdown"></p>
+        <button type="button" id="startCountdown" onclick="startCountdown()">Start Countdown</button>
+    </div>
+    <hr>
+    <h2>1_2</h2>
+    <section class="exercise1_2">
+        <div class="style">
+            <div class="zeit">100%</div>
+            <button id="btn" onclick="startPercentCountdown()">Start</button>
+        </div>
+    </section>
+    <hr>
+    <h2>1_9</h2>
+    <p>first clock requires much more data manipulation in background and is somewhat glitchy.</p>
+    <section id="liveClock1">
+        <div class="day">
+            <p class="large" id="dayLarge"></p>
+            <p class="small" id="daySmall"></p>
+        </div>
+        <div class="hours">
+            <p class="large" id="hoursLarge"></p>
+            <p class="small" id="hoursSmall"></p>
+        </div>
+        <p class="large">:</p>
+        <div class="minutes">
+            <p class="large" id="minutesLarge"></p>
+            <p class="small" id="minutesSmall"></p>
+        </div>
+        <p class="large">:</p>
+        <div class="seconds">
+            <p class="large" id="secondsLarge"></p>
+            <p class="small" id="secondsSmall"></p>
+        </div>
+        <div class="period">
+            <p class="large" id="periodLarge"></p>
+            <p class="small" id="periodSmall"></p>
+        </div>
+    </section>
+    <section id="liveClock2">
+        <div class="day2">
+            <p class="large" id="dayLarge2"></p>
+            <p class="small" id="daySmall2">DAY</p>
+        </div>
+        <div class="hours2">
+            <p class="large" id="hoursLarge2"></p>
+            <p class="small" id="hoursSmall2">HOURS</p>
+        </div>
+        <p class="large">:</p>
+        <div class="minutes2">
+            <p class="large" id="minutesLarge2"></p>
+            <p class="small" id="minutesSmall2">MINUTES</p>
+        </div>
+        <p class="large">:</p>
+        <div class="seconds2">
+            <p class="large" id="secondsLarge2"></p>
+            <p class="small" id="secondsSmall2">SECONDS</p>
+        </div>
+        <div class="period2">
+            <p class="large" id="periodLarge2"></p>
+            <p class="small" id="periodSmall2">PERIOD</p>
+        </div>
+    </section>
+    <hr>
+    <h2>3_2</h2>
+    <div id="minuteCountdownBereich">
+        <p> Minuten Countdown:</p>
+        <div id="time">00:00</div>
+        <input id="minutes" type="Number" min="0" placeholder=" Minuten übrig..." />
+        <br />
+        <button onclick="startMinCountdown()">Start Countdown</button>
+        <br />
+        <button onclick="pauseMinCountdown()">Pause Countdown</button>
+        <br />
+        <button onclick="continueMinCountdown()">Continue Countdown</button>
+        <br />
+        <button onclick="resetMinCountdown()">Reset Countdown</button>
+    </div>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
