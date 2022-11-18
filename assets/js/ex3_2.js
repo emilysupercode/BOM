@@ -3,7 +3,7 @@ let timeOutputEl = document.getElementById("time");
 let alertInput = document.getElementById("alert");
 let myInterval;
 let minutes;
-let seconds = 60;
+let seconds = 59;
 let minuteTwoDigits;
 let secondTwoDigits;
 
