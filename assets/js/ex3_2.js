@@ -1,43 +1,46 @@
-//startMinCountdown()
-//pauseMinCountdown()
-//continueMinCountdown()
-//resetMinCountdown()
-
 let minuteInputEl = document.getElementById("minutes");
 let timeOutputEl = document.getElementById("time");
-// if input is <10, add zero before output
+let alertInput = document.getElementById("alert");
 let myInterval;
-let minutes = 00;
-let seconds = 00;
+let minutes;
+let seconds = 60;
 let minuteTwoDigits;
 let secondTwoDigits;
 
 function startMinCountdown() {
-    numberInput = Number(minuteInputEl.value);
-    seconds = 59;
-    minutes = numberInput--;
-    let minuteTwoDigits = numberInput >= 10 ? numberInput : "0" + numberInput;
-    let secondTwoDigits = seconds >= 10 ? seconds : "0" + seconds;
-    timeOutputEl.innerHTML = minuteTwoDigits + ":" + secondTwoDigits;
-    myInterval = setInterval(timerCountdown, 100);
+    minutes = Number(minuteInputEl.value);
+
+    if (!minutes) {
+        return alertInput.innerHTML = "Wie viele Minuten?";
+    } else {
+        alertInput.innerHTML = "";
+    }
+
+    minutes--;
+    myInterval = setInterval(timerCountdown, 1000);
+    let minuteTwoDigits = minutes >= 10 ? minutes : "0" + minutes;
+    let secondsTwoDigits = seconds >= 10 ? seconds : "0" + seconds;
+    timeOutputEl.innerHTML = minuteTwoDigits + ":" + secondsTwoDigits;
     minuteInputEl.value = "";
 }
 
 function timerCountdown() {
+    if (minutes <= 0 && seconds <= 0) {
+        clearInterval(myInterval)
+        console.log("testfriday")
+        return;
+    }
+
+    timeOutputEl.innerHTML = "00:00";
+    if (seconds === 0) {
+        minutes--;
+        seconds = 60;
+    }
+
     seconds--;
-    let minuteTwoDigits = numberInput >= 10 ? numberInput : "0" + numberInput;
+    let minuteTwoDigits = minutes >= 10 ? minutes : "0" + minutes;
     let secondsTwoDigits = seconds >= 10 ? seconds : "0" + seconds;
     timeOutputEl.innerHTML = minuteTwoDigits + ":" + secondsTwoDigits;
-
-    // FIX ME
-    // if ((seconds = 0) && (minutes = 0)) {
-    //     console.log("test4")
-    //     clearInterval(myInterval)
-    //     return;
-    // } else {
-    //     console.log("test2")
-    //     seconds = 59;
-    // }
 }
 
 function pauseMinCountdown() {
@@ -51,25 +54,7 @@ function continueMinCountdown() {
 function resetMinCountdown() {
     clearInterval(myInterval);
     minutes === 00;
-    seconds === 00;
+    seconds === 60;
     timeOutputEl.innerHTML = "00:00";
     minuteInputEl.value = "";
 }
-
-// =====================================
-// trash
-// =====================================
-// in timerCountdown
-// else if (timeOutputEl.innerHTML == '00:00') {
-//     console.log("test3")
-//     clearInterval(myInterval)
-// }
-
-// in startMinCountdown
-// if (minutes === 0 && seconds === 0) {
-//     console.log("test1")
-//     clearInterval(myInterval);
-// } else if (seconds === 0) {
-//     seconds = 59;
-//     minutes = numberInput--;
-// }
